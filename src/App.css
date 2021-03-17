@@ -22,7 +22,7 @@ form {
     padding-bottom: 30px;
     border: 2px solid#00008a;
     margin-left: 78px;
-    margin-right: 139px;
+    margin-right: 123px;
 }
 
 h1 {
@@ -37,6 +37,27 @@ p {
 input {
     margin-right: 10px;
     height: 22px;
+}
+
+button,
+input[type="submit"] {
+    background-color: rgb(63, 63, 240);
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 4px 12px;
+    font-size: 12px;
 }
 
 .flex {

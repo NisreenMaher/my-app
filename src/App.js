@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import MyArtical from "./component/ArticleB";
 import Form from "./component/form";
@@ -24,6 +24,13 @@ function App() {
     localStorage.setItem("array", JSON.stringify(oldArray));
     //setRandom(Math.random());
   };
+  const deleteArticle = (id) => {
+    console.log(id);
+    const oldArray = JSON.parse(localStorage.getItem("array"));
+    oldArray.splice(id, 1);
+    setArray(oldArray);
+    localStorage.setItem("array", JSON.stringify(oldArray));
+  };
 
   return (
     <div>
@@ -34,9 +41,10 @@ function App() {
             return (
               <MyArtical
                 key={"art-" + index}
+                id={index}
                 title={e.title}
                 body={e.body}
-                onClick={() => alert(e.title + "\n" + e.body)}
+                deleteArticle={deleteArticle}
               />
             );
           })}
